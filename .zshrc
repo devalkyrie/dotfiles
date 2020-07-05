@@ -100,6 +100,11 @@ alias cd....='....'
 # vim free
 alias vi='nvim'
 alias vim='nvim'
+# git aliases
+alias g='git'
+alias ga='git add .'
+alias gc='git commit'
+alias glog='git log --graph --abbrev-commit --decorate --all'
 # misc free
 alias zshconf="vi ~/.zshrc"
 alias ohmyzsh="vi ~/.oh-my-zsh"
