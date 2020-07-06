@@ -157,7 +157,7 @@ tten () {
 }
 # percent ram usage
 psgrp (){
-	 ps aux | awk '/gnome/ { sum+=$4 } END { print sum }'
+	 ps aux | awk '/java/ { sum+=$4 } END { print sum }'
 }
 # list apps using internet
 inapp () {

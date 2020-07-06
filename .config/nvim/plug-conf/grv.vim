@@ -5,6 +5,7 @@ if exists('+termguicolors')
 endif
 let g:gruvbox_invert_selection='0'
 
-colorscheme gruvbox
+" colorscheme gruvbox
+colo seoul256
 set background=dark
 

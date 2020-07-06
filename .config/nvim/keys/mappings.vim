@@ -38,3 +38,7 @@ nnoremap <C-l> <C-w>l
 
 nnoremap <Leader>o o<Esc>^Da
 nnoremap <Leader>O O<Esc>^Da
+
+" Goyo Remap
+"map <Leader>gy :Goyo<CR>
+"map <Leader>ll :limelight!!<CR>
