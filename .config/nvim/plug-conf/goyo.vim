@@ -1,5 +1,5 @@
-let g:goyo_width = 60
-let g:limelight_default_coefficient=0.8
+let g:goyo_width = 70
+let g:limelight_default_coefficient=0.7
 
 " Goyo Remap
 map <Leader>gy :Goyo<CR>

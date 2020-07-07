@@ -26,13 +26,14 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     " File search
     Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
     Plug 'junegunn/fzf.vim'
+    Plug 'airblade/vim-rooter' " Makes sure fzf searches within .git 
     " Undo Tree
     Plug 'mbbill/undotree'
     " git use
     Plug 'airblade/vim-gitgutter'
     " Status line
     Plug 'vim-airline/vim-airline'
-    Plug 'vim-airline/vim-airline-themes'
+    " Plug 'vim-airline/vim-airline-themes'
     " Multiple Cursor
     Plug 'terryma/vim-multiple-cursors'
     " Startup View
