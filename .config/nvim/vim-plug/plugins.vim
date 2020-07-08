@@ -40,5 +40,10 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     Plug 'mhinz/vim-startify'
     " Vim wiki for markdown notes
     Plug 'vimwiki/vimwiki'
+    " Interactive Menu for key bindings
+    Plug 'liuchengxu/vim-which-key'
+    " Floating window for multipurpose terminal
+    Plug 'voldikss/vim-floaterm'
+
 
 call plug#end()
