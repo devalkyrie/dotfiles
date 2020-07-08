@@ -18,7 +18,7 @@ nnoremap <TAB> :bnext<CR>
 nnoremap <S-TAB> :bprevious<CR>
 
 " Alternate way to save
-nnoremap <C-s> :w<CR>
+nnoremap <Leader>s :w<CR>
 " Alternate way to quit
 nnoremap <C-Q> :wq!<CR>
 " Use control-c instead of escape
@@ -38,6 +38,18 @@ nnoremap <C-l> <C-w>l
 
 nnoremap <Leader>o o<Esc>^Da
 nnoremap <Leader>O O<Esc>^Da
+
+" space-1 insert "!" commenting
+nnoremap <leader>1 :norm i!<cr>
+vnoremap <leader>1 :norm i!<cr>
+
+" space-' insert """ commenting
+nnoremap <leader>' :norm i"<cr>
+vnoremap <leader>' :norm i"<cr>
+
+" space-3 insert "#" commenting
+nnoremap <leader>3 :norm i#<cr>
+vnoremap <leader>3 :norm i#<cr>
 
 " Goyo Remap
 "map <Leader>gy :Goyo<CR>

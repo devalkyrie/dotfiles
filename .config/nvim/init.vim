@@ -6,3 +6,6 @@ source $HOME/.config/nvim/plug-conf/coc.vim
 source $HOME/.config/nvim/plug-conf/goyo.vim
 source $HOME/.config/nvim/plug-conf/fzf.vim
 source $HOME/.config/nvim/plug-conf/starty.vim
+source $HOME/.config/nvim/plug-conf/hexocolor.vim
+source $HOME/.config/nvim/plug-conf/floaterm.vim
+source $HOME/.config/nvim/plug-conf/which-keys.vim

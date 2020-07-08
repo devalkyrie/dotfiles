@@ -2,7 +2,7 @@ let g:goyo_width = 70
 let g:limelight_default_coefficient=0.7
 
 " Goyo Remap
-map <Leader>gy :Goyo<CR>
+map <Leader>Gy :Goyo<CR>
 map <Leader>ll :limelight!!<CR>
 
 

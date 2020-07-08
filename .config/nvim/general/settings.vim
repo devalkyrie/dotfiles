@@ -36,6 +36,7 @@ set clipboard=unnamedplus               " Copy paste between vim and everything 
 set notitle                             " Removes tile display
 set relativenumber                      " Relative number for faster movement
 set wildmode=longest,list,full          " Autocomplete in cmd mode
+set termguicolors                       " Allow terminal to use colors
 
 set colorcolumn=80
 highlight ColorColumn ctermbg=0 guibg=lightgrey

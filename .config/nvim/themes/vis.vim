@@ -9,7 +9,16 @@ set background=dark
 " Set contrast.
 " This configuration option should be placed before `colorscheme gruvbox-material`.
 " Available values: 'hard', 'medium'(default), 'soft'
-let g:gruvbox_material_background = 'hard'
+let g:gruvbox_contrast_dark = 'medium'
+if exists('+termguicolors')
+    let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
+    let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
+endif
+let g:gruvbox_bold = 1
+let g:gruvbox_italic = 1
+let g:gruvbox_italicize_strings = 1
+let g:gruvbox_sign_column = 'bg0'
+let g:gruvbox_invert_selection='0'
 
 colorscheme gruvbox-material
 
@@ -45,9 +54,6 @@ let g:airline_right_alt_sep = ''
 let g:airline#extensions#tabline#formatter = 'unique_tail'
 
 
-" Switch to your current theme
-let g:airline_theme = 'gruvbox_material'
-
 " Always show tabs
 set showtabline=2
 
@@ -57,6 +63,5 @@ set noshowmode
 " Sections
 " let g:airline_section_c = ''
 let g:airline_section_a = "shar1"
-" let g:airline_section_a = ""
 let g:airline_section_y = ''
 let g:webdevicons_enable_airline_tabline = 1

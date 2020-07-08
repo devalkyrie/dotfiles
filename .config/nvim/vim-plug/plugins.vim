@@ -23,6 +23,8 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     Plug 'junegunn/goyo.vim'
     Plug 'junegunn/limelight.vim'
     Plug 'junegunn/seoul256.vim'
+    " Faster Colorizer Alternative
+    Plug 'rrethy/vim-hexokinase', { 'do': 'make hexokinase' }
     " File search
     Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
     Plug 'junegunn/fzf.vim'

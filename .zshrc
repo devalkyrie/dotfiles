@@ -123,6 +123,8 @@ config config --local status.showUntrackedFiles no
 # Git config for not pushing to the wrong branch
 git config --global push.default current
 
+
+###################################################################################################################
 # Functions
 # make and cd into a directory.
 mcd () {
@@ -133,10 +135,12 @@ mcd () {
 uuid () {
 	cat /proc/sys/kernel/random/uuid
 }
+
 # show newly modified files.
 newest () {
 	find . -type f -printf '%TY-%Tm-%Td %TT %p\n' | grep -v cache | grep -v ".hg" | grep -v ".git" | sort -r | less
 }
+
 # shows clock at top right
 clock () {
     while sleep 1;
@@ -147,22 +151,27 @@ clock () {
         tput rc
     done &
 }
+
 # http://www.commandlinefu.com/commands/view/2829
 wp () {
     dig +short txt ${1}.wp.dg.cx
 }
+
 # top [10] used commands from history
 tten () {
 	history | awk '{a[$2]++}END{for(i in a){print a[i] " " i}}' | sort -rn | head
 }
+
 # percent ram usage
 psgrp (){
 	 ps aux | awk '/java/ { sum+=$4 } END { print sum }'
 }
+
 # list apps using internet
 inapp () {
 	lsof -P -i -n
 }
+
 # Go up [n] directories
 upi () {
     local cdir="$(pwd)"
@@ -185,12 +194,19 @@ upi () {
     cd "${cdir}"
 }
 
+# Custom 'cd'
+chpwd() ls
+
+
+############################################################################################
 # Enviornment
 export PATH=/home/ruturaj/code/flutter/bin:$PATH
 export BROWSER=/usr/bin/xdg-open
 export EDITOR=nvim
 export VISUAL=nvim
 export PATH=~/.cargo/bin:$PATH
+export GOROOT=/usr/local/go
+export PATH="${GOROOT}/bin:${PATH}"
 export PKG_CONFIG_PATH=/usr/lib/x86_64-linux-gnu/pkgconfig
 export FZF_DEFAULT_COMMAND='rg --files --hidden --follow --no-ignore-vcs'
 export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
@@ -213,9 +229,6 @@ man() {
 }
 
 #plugins = (zsh-syntax-highlighting)
-
-# Custom 'cd'
-chpwd() ls
 
 # Load zsh-syntax-highlighting; should be last.
 source ~/.zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh

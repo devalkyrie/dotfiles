@@ -14,6 +14,7 @@ let g:startify_custom_header = [
       \ '                                    MMMMMM                                    ',
       \ '                                     MMMM                                     ',
       \ '                                      MM                                      ',
+      \ '                                     shar1                                     ',
       \]
 
 
