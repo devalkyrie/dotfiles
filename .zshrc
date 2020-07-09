@@ -86,6 +86,7 @@ alias ls='ls --group-directories-first --time-style=+"%d.%m.%Y %H:%M" --color=au
 alias ll='ls --group-directories-first --time-style=+"%d.%m.%Y %H:%M" --color=auto -F -hl'
 alias la='ls --group-directories-first --time-style=+"%d.%m.%Y %H:%M" --color=auto -F -hlA'
 alias lt='ls --group-directories-first --time-style=+"%d.%m.%Y %H:%M" --color=auto -F -hlt'
+alias l='lsd --group-dirs first'
 # xclip shorts
 alias xcp='xclip-copyfile'
 alias xcu='xclip-cutfile'
@@ -119,6 +120,8 @@ alias mv='mv -i'
 # Config for dot files
 alias config='/usr/bin/git --git-dir=$HOME/dotfiles/ --work-tree=$HOME'
 config config --local status.showUntrackedFiles no
+# A better cat
+alias cat='bat'
 
 # Git config for not pushing to the wrong branch
 git config --global push.default current
@@ -197,6 +200,28 @@ upi () {
 # Custom 'cd'
 chpwd() ls
 
+# even better git log
+gllog() {
+    setterm -linewrap off
+
+    git --no-pager log --all --color=always --graph --abbrev-commit --decorate \
+        --format=format:'%C(bold blue)%h%C(reset) - %C(bold green)(%ar)%C(reset) %s%C(reset) %C(dim white)- %an%C(reset)%C(bold yellow)%d%C(reset)' | \
+        sed -E \
+            -e 's/\|(\x1b\[[0-9;]*m)+\\(\x1b\[[0-9;]*m)+ /├\1─╮\2/' \
+            -e 's/(\x1b\[[0-9;]+m)\|\x1b\[m\1\/\x1b\[m /\1├─╯\x1b\[m/' \
+            -e 's/\|(\x1b\[[0-9;]*m)+\\(\x1b\[[0-9;]*m)+/├\1╮\2/' \
+            -e 's/(\x1b\[[0-9;]+m)\|\x1b\[m\1\/\x1b\[m/\1├╯\x1b\[m/' \
+            -e 's/╮(\x1b\[[0-9;]*m)+\\/╮\1╰╮/' \
+            -e 's/╯(\x1b\[[0-9;]*m)+\//╯\1╭╯/' \
+            -e 's/(\||\\)\x1b\[m   (\x1b\[[0-9;]*m)/╰╮\2/' \
+            -e 's/(\x1b\[[0-9;]*m)\\/\1╮/g' \
+            -e 's/(\x1b\[[0-9;]*m)\//\1╯/g' \
+            -e 's/^\*|(\x1b\[m )\*/\1⎬/g' \
+            -e 's/(\x1b\[[0-9;]*m)\|/\1│/g' \
+        | command less -r +'/[^/]HEAD'
+
+    setterm -linewrap on
+}
 
 ############################################################################################
 # Enviornment
@@ -208,6 +233,7 @@ export PATH=~/.cargo/bin:$PATH
 export GOROOT=/usr/local/go
 export PATH="${GOROOT}/bin:${PATH}"
 export PKG_CONFIG_PATH=/usr/lib/x86_64-linux-gnu/pkgconfig
+export BAT_THEME="TwoDark"
 export FZF_DEFAULT_COMMAND='rg --files --hidden --follow --no-ignore-vcs'
 export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
 export FZF_DEFAULT_OPTS='--height=70% --preview="cat {}" --preview-window=right:60%:wrap'
