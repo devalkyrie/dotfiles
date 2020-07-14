@@ -17,6 +17,9 @@ setopt complete_aliases
 setopt NO_BG_NICE # don't nice background tasks
 
 
+# Set xrate for faster cursor
+xset r rate 500 30 
+
 
 # Prevent duplicates in PATH variable
 typeset -U path

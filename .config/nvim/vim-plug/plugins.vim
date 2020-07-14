@@ -17,6 +17,8 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     " theme 
     Plug 'gruvbox-community/gruvbox'
     Plug 'sainnhe/gruvbox-material'
+    " Icons
+    Plug 'ryanoasis/vim-devicons'
     " Coc, vscode like feature
     Plug 'neoclide/coc.nvim', {'branch': 'release'}
     " Clean editor view
