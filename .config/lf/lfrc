@@ -88,4 +88,5 @@ map b bulkrename
 map <c-e> down
 map <c-y> up
 map V push :!nvim<space>
-f
+
+map - $~/.config/lf/draw_img.sh $f

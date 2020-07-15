@@ -84,6 +84,8 @@ preexec() { echo -ne '\e[5 q' ;} # Use beam shape cursor for each new prompt.
 
 
 # Aliases
+# super user
+alias ss='sudo -s'
 # listing files
 alias ls='ls --group-directories-first --time-style=+"%d.%m.%Y %H:%M" --color=auto -F -h'
 alias ll='ls --group-directories-first --time-style=+"%d.%m.%Y %H:%M" --color=auto -F -hl'
@@ -226,6 +228,19 @@ gllog() {
     setterm -linewrap on
 }
 
+# Manual pages with colors
+man() {
+	env \
+		LESS_TERMCAP_md=$'\e[1;36m' \
+		LESS_TERMCAP_me=$'\e[0m' \
+		LESS_TERMCAP_se=$'\e[0m' \
+		LESS_TERMCAP_so=$'\e[1;40;92m' \
+		LESS_TERMCAP_ue=$'\e[0m' \
+		LESS_TERMCAP_us=$'\e[1;32m' \
+			man "$@"
+}
+
+
 ############################################################################################
 # Enviornment
 export PATH=/home/ruturaj/code/flutter/bin:$PATH
@@ -245,17 +260,7 @@ if [ $TILIX_ID ] || [ $VTE_VERSION ]; then
         source /etc/profile.d/vte-2.91.sh
 fi
 
-# Manual pages with colors
-man() {
-	env \
-		LESS_TERMCAP_md=$'\e[1;36m' \
-		LESS_TERMCAP_me=$'\e[0m' \
-		LESS_TERMCAP_se=$'\e[0m' \
-		LESS_TERMCAP_so=$'\e[1;40;92m' \
-		LESS_TERMCAP_ue=$'\e[0m' \
-		LESS_TERMCAP_us=$'\e[1;32m' \
-			man "$@"
-}
+
 
 #plugins = (zsh-syntax-highlighting)
 
@@ -263,5 +268,6 @@ man() {
 source ~/.zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 source ~/.zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
 source ~/.zsh/scripts/tile.sh
+source ~/.config/lf/lf_icons.sh
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
