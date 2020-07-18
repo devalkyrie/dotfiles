@@ -27,6 +27,9 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     Plug 'junegunn/seoul256.vim'
     " Faster Colorizer Alternative
     Plug 'rrethy/vim-hexokinase', { 'do': 'make hexokinase' }
+    " Tpop'ing
+    Plug 'tpope/vim-commentary'
+    Plug 'tpope/vim-surround'
     " File search
     Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
     Plug 'junegunn/fzf.vim'
@@ -34,7 +37,8 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     " Undo Tree
     Plug 'mbbill/undotree'
     " git use
-    Plug 'airblade/vim-gitgutter'
+    Plug 'mhinz/vim-signify'
+    " Plug 'airblade/vim-gitgutter'
     " Status line
     Plug 'vim-airline/vim-airline'
     " Plug 'vim-airline/vim-airline-themes'
@@ -48,6 +52,8 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     Plug 'liuchengxu/vim-which-key'
     " Floating window for multipurpose terminal
     Plug 'voldikss/vim-floaterm'
+    " Experimental: sonicpi
+    Plug 'dermusikman/sonicpi.vim'
 
 
 call plug#end()
