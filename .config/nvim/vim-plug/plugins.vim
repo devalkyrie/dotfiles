@@ -11,13 +11,12 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     " Better Syntax Support
     Plug 'sheerun/vim-polyglot'
     " File Explorer
-    Plug 'scrooloose/NERDTree'
+    " Plug 'scrooloose/NERDTree' " Using coc-explorer for now.
     " Auto pairs for '(' '[' '{'
     Plug 'jiangmiao/auto-pairs'
     " theme 
     Plug 'gruvbox-community/gruvbox'
     Plug 'sainnhe/gruvbox-material'
-    " Icons
     Plug 'ryanoasis/vim-devicons'
     " Coc, vscode like feature
     Plug 'neoclide/coc.nvim', {'branch': 'release'}
@@ -52,8 +51,20 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     Plug 'liuchengxu/vim-which-key'
     " Floating window for multipurpose terminal
     Plug 'voldikss/vim-floaterm'
-    " Experimental: sonicpi
-    Plug 'dermusikman/sonicpi.vim'
 
+    
+    " Removed Or Future Considerations.
+
+    " Experimental: sonicpi
+    " Plug 'dermusikman/sonicpi.vim'
+
+    " Usefull patch config
+    " Plug 'junkblocker/patchreview-vim''
 
 call plug#end()
+
+" Automatically install missing plugins on startup
+autocmd VimEnter *
+  \  if len(filter(values(g:plugs), '!isdirectory(v:val.dir)'))
+  \|   PlugInstall --sync | q
+  \| endif

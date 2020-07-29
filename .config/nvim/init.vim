@@ -9,3 +9,4 @@ source $HOME/.config/nvim/plug-conf/starty.vim
 source $HOME/.config/nvim/plug-conf/hexocolor.vim
 source $HOME/.config/nvim/plug-conf/floaterm.vim
 source $HOME/.config/nvim/plug-conf/which-keys.vim
+source $HOME/.config/nvim/plug-conf/signify.vim
