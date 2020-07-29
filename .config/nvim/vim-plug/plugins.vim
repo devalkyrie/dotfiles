@@ -51,6 +51,10 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     Plug 'liuchengxu/vim-which-key'
     " Floating window for multipurpose terminal
     Plug 'voldikss/vim-floaterm'
+    " Get Difference Between Folders
+    Plug 'will133/vim-dirdiff'
+    " Play with vim
+    Plug 'ThePrimeagen/vim-be-good'
 
     
     " Removed Or Future Considerations.

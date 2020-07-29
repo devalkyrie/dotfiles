@@ -260,6 +260,20 @@ if [ $TILIX_ID ] || [ $VTE_VERSION ]; then
         source /etc/profile.d/vte-2.91.sh
 fi
 
+# Conda Env
+# Miniconda3
+__conda_setup="$('/Users/ruturaj/Miniconda3/bin/conda' 'shell.bash' 'hook' 2> /dev/null)"
+if [ $? -eq 0 ]; then
+    eval "$__conda_setup"
+else
+    if [ -f "/Users/ruturaj/Miniconda3/etc/profile.d/conda.sh" ]; then
+        . "/Users/ruturaj/Miniconda3/etc/profile.d/conda.sh"
+    else
+        export PATH="/Users/ruturaj/Miniconda3/bin:$PATH"
+    fi
+fi
+unset __conda_setup
+
 
 
 #plugins = (zsh-syntax-highlighting)
