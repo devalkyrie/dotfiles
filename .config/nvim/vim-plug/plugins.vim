@@ -10,20 +10,18 @@ call plug#begin('~/.config/nvim/autoload/plugged')
 
     " Better Syntax Support
     Plug 'sheerun/vim-polyglot'
-    " File Explorer
-    " Plug 'scrooloose/NERDTree' " Using coc-explorer for now.
     " Auto pairs for '(' '[' '{'
     Plug 'jiangmiao/auto-pairs'
     " theme 
-    Plug 'gruvbox-community/gruvbox'
     Plug 'sainnhe/gruvbox-material'
+    Plug 'artanikin/vim-synthwave84'
+    Plug 'junegunn/seoul256.vim'
     Plug 'ryanoasis/vim-devicons'
     " Coc, vscode like feature
     Plug 'neoclide/coc.nvim', {'branch': 'release'}
     " Clean editor view
     Plug 'junegunn/goyo.vim'
     Plug 'junegunn/limelight.vim'
-    Plug 'junegunn/seoul256.vim'
     " Faster Colorizer Alternative
     Plug 'rrethy/vim-hexokinase', { 'do': 'make hexokinase' }
     " Tpop'ing
@@ -36,11 +34,10 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     " Undo Tree
     Plug 'mbbill/undotree'
     " git use
+    Plug 'tpope/vim-fugitive'
     Plug 'mhinz/vim-signify'
-    " Plug 'airblade/vim-gitgutter'
     " Status line
     Plug 'vim-airline/vim-airline'
-    " Plug 'vim-airline/vim-airline-themes'
     " Multiple Cursor
     Plug 'terryma/vim-multiple-cursors'
     " Startup View
@@ -55,15 +52,22 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     Plug 'will133/vim-dirdiff'
     " Play with vim
     Plug 'ThePrimeagen/vim-be-good'
+    Plug 'gruvbox-community/gruvbox'
 
     
     " Removed Or Future Considerations.
 
-    " Experimental: sonicpi
+    " music coding: sonicpi
     " Plug 'dermusikman/sonicpi.vim'
 
     " Usefull patch config
     " Plug 'junkblocker/patchreview-vim''
+
+    " File Explorer
+    " Plug 'scrooloose/NERDTree' " Using coc-explorer for now.
+
+    " Plug 'vim-airline/vim-airline-themes'
+    " Plug 'airblade/vim-gitgutter'
 
 call plug#end()
 

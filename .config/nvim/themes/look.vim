@@ -9,13 +9,14 @@ set background=dark
 " Set contrast.
 " This configuration option should be placed before `colorscheme gruvbox-material`.
 " Available values: 'hard', 'medium'(default), 'soft'
-let g:gruvbox_contrast_dark = 'medium'
+let g:gruvbox_contrast_dark = 'soft'
 if exists('+termguicolors')
     let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
     let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
 endif
 
 colorscheme gruvbox-material
+" colorscheme seoul256-light
 
 let g:gruvbox_bold = 1
 let g:gruvbox_italic = 1
@@ -55,10 +56,6 @@ let g:airline_right_alt_sep = ''
 
 let g:airline#extensions#tabline#formatter = 'unique_tail'
 
-
-" Always show tabs
-set showtabline=2
-
 " We don't need to see things like -- INSERT -- anymore
 set noshowmode
 
@@ -71,5 +68,5 @@ let g:webdevicons_enable_airline_tabline = 1
 " Vimdiff Settings
 hi DiffAdd      ctermfg=NONE          ctermbg=Green
 hi DiffChange   ctermfg=NONE          ctermbg=NONE
-hi DiffDelete   ctermfg=LightBlue     ctermbg=Red
-hi DiffText     ctermfg=Yellow        ctermbg=Red
+hi DiffDelete   ctermfg=LightBlue     ctermbg=Brown
+hi DiffText     ctermfg=Yellow        ctermbg=DarkCyan

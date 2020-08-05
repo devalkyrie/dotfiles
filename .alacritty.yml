@@ -122,7 +122,9 @@ font:
     # family : GohuFont Nerd Font
     # family :  FiraCodeiScript Font
     # family: DaddyTimeMono Nerd Font
-    family: Iosevka Custom
+    # family: Iosevka Custom
+    # family: PragmataPro for Powerline
+    family: PragmataProMonoW20-Regular
 
     # The `style` can be specified to pick a specific face.
     style: Regular
@@ -147,7 +149,9 @@ font:
     # family : GohuFont Nerd Font
     # family :  FiraCodeiScript Font
     # family: DaddyTimeMono Nerd Font
-    family: Iosevka Custom
+    # family: Iosevka Custom
+    # family: PragmataPro for Powerline
+    family: PragmataProMonoW20-Regular
 
 
     # The `style` can be specified to pick a specific face.
@@ -173,7 +177,9 @@ font:
     # family : GohuFont Nerd Font
     # family :  FiraCodeiScript Font
     # family: DaddyTimeMono Nerd Font
-    family: Iosevka Custom
+    # family: Iosevka Custom
+    # family: PragmataPro for Powerline
+    family: PragmataProMonoW20-Regular
 
 
     # The `style` can be specified to pick a specific face.
@@ -199,13 +205,15 @@ font:
     # family : GohuFont Nerd Font
     # family :  FiraCodeiScript Font
     # family: DaddyTimeMono Nerd Font
-    family: Iosevka Custom
+    # family: Iosevka Custom
+    # family: PragmataPro for Powerline
+    family: PragmataProMonoW20-Regular
 
     # The `style` can be specified to pick a specific face.
     style: Bold Italic
 
   # Point size
-    size: 12.0
+    size: 10.0
 
   # Offset is the extra space around each character. `offset.y` can be thought of
   # as modifying the line spacing, and `offset.x` as modifying the letter spacing.
@@ -237,7 +245,7 @@ font:
   #use_thin_strokes: true
 
 # If `true`, bold text is drawn using the bright color variants.
-draw_bold_text_with_bright_colors: false
+draw_bold_text_with_bright_colors: true
 
 
 # Gruvbox Palette with dark hard background
