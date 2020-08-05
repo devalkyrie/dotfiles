@@ -1,0 +1,74 @@
+[user]
+	email = narwashpius@gmail.com
+	name = devalkyire
+[filter "media"]
+    required = true
+    clean = git media clean %f
+    smudge = git media smudge %f
+[push]
+	default = current
+[alias]
+    lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
+    sb = status -sb
+    sl = stash list --pretty=format:'%C(red)%h%C(reset) - %C(yellow)(%gd%C(yellow))%C(reset) %<(70,trunc)%s %C(green)(%cr) %C(bold blue)<%an>%C(reset)'
+    rl = reflog --pretty=format:'%Cred%h%Creset %C(yellow)%gd%C(reset) %C(auto)%gs%C(reset) %C(green)(%cr)%C(reset) %C(bold blue)<%an>%Creset' --abbrev-commit
+    vimdiff = difftool
+    dt = difftool
+[pager]
+    log  = diff-so-fancy | LESS= less ${GIT_PAGER_ARGS---no-init --quit-at-eof --quit-if-one-screen} --RAW-CONTROL-CHARS
+    show = diff-so-fancy-smart '^(commit [a-f0-9]+|(added|deleted|modified|renamed): )'
+    diff = diff-so-fancy-smart '^(added|deleted|modified|renamed): '   #diff = diff-so-fancy | less --tabs=4 -RFX# --pattern '^(Date|added|deleted|modified): .*$'
+[interactive]
+    diffFilter = diff-so-fancy
+[diff]
+    tool = vimdiff
+[difftool]
+    prompt = false
+[difftool "vimdiff"]
+    #cmd = nvim -d $BASE $LOCAL $REMOTE $MERGED -c '$wincmd w' -c 'wincmd J'
+    cmd = nvim -d $BASE $LOCAL
+[merge]
+    tool = vimdiff
+   conflictStyle = diff3
+[mergetool "vimdiff"]
+    cmd = nvim -d $BASE $LOCAL $REMOTE $MERGED -c '$wincmd w' -c 'wincmd J'
+[filter "hawser"]
+    clean = git hawser clean %f
+    smudge = git hawser smudge %f
+    required = true
+[filter "lfs"]
+    clean = git-lfs clean -- %f
+    smudge = git-lfs smudge -- %f
+    process = git-lfs filter-process
+    required = true
+[core]
+    pager = diff-so-fancy | less --tabs=4 -iFMRSX
+    excludesfile = ~/.gitignore_global
+ [color]
+    ui = auto
+    wtf = true
+[color "diff"]
+    old = bold red
+    new = bold green
+    meta = bold yellow
+[color "branch"]
+    current = bold green
+    local = green
+    remote = red
+    upstream = bold red
+    plain = bold yellow
+[color "status"]
+    added = bold red
+    changed = bold green
+    untracked = bold cyan
+    nobranch = red reverse
+[color "interactive"]
+    prompt = bold blue
+    error = bold red 
+[color "diff-highlight"]
+    oldnormal = red
+    oldhighlight = red bold 52
+    newnormal = green
+    newhighlight = bold green 22   whitespace = 160 reverse
+[credential]
+    helper = cache --timeout=3600000
