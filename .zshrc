@@ -42,15 +42,10 @@ compinit
 _comp_options+=(globdots)
 
 #bindkeys
-# Use vim keys in tab complete menu:
-bindkey -M menuselect 'h' vi-backward-char
-bindkey -M menuselect 'k' vi-up-line-or-history
-bindkey -M menuselect 'l' vi-forward-char
-bindkey -M menuselect 'j' vi-down-line-or-history
-#bindkey -v '^?' backward-delete-char
-
 # Use vim style line editing in zsh
 bindkey -v
+# Natural replacement for <ESC> in vim mode
+bindkey -M viins ‘jj’ vi-cmd-mode
 # Movement
 bindkey -a 'gg' beginning-of-buffer-or-history
 bindkey -a 'G' end-of-buffer-or-history
@@ -60,6 +55,12 @@ bindkey -a '^R' redo
 # Edit line in vim with ctrl-e:
 autoload edit-command-line; zle -N edit-command-line
 bindkey '^e' edit-command-line
+# Use vim keys in tab complete menu:
+bindkey -M menuselect 'h' vi-backward-char
+bindkey -M menuselect 'k' vi-up-line-or-history
+bindkey -M menuselect 'l' vi-forward-char
+bindkey -M menuselect 'j' vi-down-line-or-history
+bindkey -v '^?' backward-delete-char
 
 # Change cursor shape for different vi modes.
 function zle-keymap-select {
@@ -106,15 +107,18 @@ alias cd....='....'
 # vim free
 alias vi='nvim'
 alias vim='nvim'
+alias vb='/usr/bin/nvim -u ~/.bavimrc'
 # git aliases
 alias g='git'
-alias ga='git add .'
+alias ga='git add'
 alias gc='git commit'
+alias gcl='git clone'
 alias glog='git log --graph --abbrev-commit --decorate --all'
 # misc free
 alias zshconf="vi ~/.zshrc"
 alias ohmyzsh="vi ~/.oh-my-zsh"
 alias cl="clear"
+alias build="sudo make clean install"
 #alias alaconfig ="vi ~/.alacritty.yml"
 alias lie='cmatrix -a -s'
 alias apt='sudo apt-fast'

@@ -40,6 +40,8 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     Plug 'vim-airline/vim-airline'
     " Multiple Cursor
     Plug 'terryma/vim-multiple-cursors'
+    " Move selection
+    Plug 'matze/vim-move'
     " Startup View
     Plug 'mhinz/vim-startify'
     " Vim wiki for markdown notes
@@ -52,7 +54,6 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     Plug 'will133/vim-dirdiff'
     " Play with vim
     Plug 'ThePrimeagen/vim-be-good'
-    Plug 'gruvbox-community/gruvbox'
 
     
     " Removed Or Future Considerations.
@@ -68,6 +69,14 @@ call plug#begin('~/.config/nvim/autoload/plugged')
 
     " Plug 'vim-airline/vim-airline-themes'
     " Plug 'airblade/vim-gitgutter'
+    " Plug 'gruvbox-community/gruvbox'
+
+    " Interactive Must Try Scratchpad
+    " Plug 'metakirby5/codi.vim'
+
+    " EasyMotion
+    " Plug 'easymotion/vim-easymotion'
+
 
 call plug#end()
 

@@ -70,3 +70,15 @@ hi DiffAdd      ctermfg=NONE          ctermbg=Green
 hi DiffChange   ctermfg=NONE          ctermbg=NONE
 hi DiffDelete   ctermfg=LightBlue     ctermbg=Brown
 hi DiffText     ctermfg=Yellow        ctermbg=DarkCyan
+
+" FOLDING {{{
+
+augroup folding_vim
+  autocmd!
+  autocmd FileType vim          setlocal foldmethod=marker
+  autocmd FileType snippets     setlocal foldmethod=marker
+  autocmd FileType lua          setlocal foldmethod=marker
+  autocmd FileType python       setlocal foldmethod=indent
+augroup END
+
+" }}}

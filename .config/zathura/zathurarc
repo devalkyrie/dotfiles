@@ -1,3 +1,6 @@
+# font
+set font                        "monospace 11"
+
 # copy selection to system clipboard
 set selection-clipboard clipboard
 set window-title-home-tilde true
